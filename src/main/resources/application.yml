@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    hikari:
+     jdbc-url: jdbc:h2:mem:testdb
+#     username: sa
+#     password: 
+#     driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format-sql: true # To beautify or pretty print the SQL
+        show-sql: true # show sql
+  h2:
+    console:
+      enabled: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: TRACE # show parameter binding
+        SQL: DEBUG
